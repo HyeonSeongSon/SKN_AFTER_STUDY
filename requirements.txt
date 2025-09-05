@@ -3,3 +3,8 @@ pandas
 numpy
 pyarrow
 openpyxl
+dotenv
+langchain_openai
+langchain
+sentence_transformers
+xgboost
