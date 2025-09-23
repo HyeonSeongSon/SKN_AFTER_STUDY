@@ -1,0 +1,2123 @@
+{
+  "input": "오늘 점심 500kcal 이하로 먹을 수 있는 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500;"
+},
+{
+  "input": "단백질 위주로 구성된 다이어트 레시피 알려줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "30분 안에 만들 수 있는 저칼로리 저녁 메뉴가 있을까?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND RCP_WAY2 LIKE '%30분%';"
+},
+{
+  "input": "저지방, 저칼로리 간식 레시피 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 10 AND INFO_ENG <= 200;"
+},
+{
+  "input": "체중 감량을 위해 탄수화물 적은 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30;"
+},
+{
+  "input": "다이어트 식단용 샐러드 레시피 알려줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "운동 후 먹기 좋은 단백질 식단 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "1인 기준 칼로리 400kcal 이하 저녁 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "다이어트용으로 밥 대신 먹을 수 있는 요리 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 NOT LIKE '%밥%' AND INFO_ENG <= 500;"
+},
+{
+  "input": "다이어트하면서 배불리 먹을 수 있는 요리 있나요?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND INFO_PRO >= 15;"
+},
+{
+  "input": "오늘 점심 500kcal 이하로 먹을 수 있는 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500;"
+},
+{
+  "input": "단백질 위주로 구성된 다이어트 레시피 알려줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "30분 안에 만들 수 있는 저칼로리 저녁 메뉴가 있을까?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND RCP_WAY2 LIKE '%30분%';"
+},
+{
+  "input": "저지방, 저칼로리 간식 레시피 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 10 AND INFO_ENG <= 200;"
+},
+{
+  "input": "체중 감량을 위해 탄수화물 적은 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30;"
+},
+
+...
+
+{
+  "input": "다이어트하면서 포만감 느낄 수 있는 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND INFO_PRO >= 15;"
+},
+{
+  "input": "체중 감량을 위해 단백질 많은 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 25;"
+},
+{
+  "input": "저칼로리 다이어트 간식 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 150 AND INFO_FAT <= 5;"
+},
+{
+  "input": "저염식 다이어트 저녁 메뉴 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_NA <= 500 AND INFO_ENG <= 500;"
+},
+{
+  "input": "다이어트용 샐러드 레시피 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "운동 후 먹기 좋은 단백질 간식 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20 AND INFO_ENG <= 300;"
+},
+{
+  "input": "다이어트용 저칼로리 저녁 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "저염식 간단 다이어트 레시피 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_NA <= 500 AND INFO_ENG <= 300;"
+},
+{
+  "input": "다이어트하면서 배부르게 먹을 수 있는 저칼로리 요리 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 450 AND INFO_PRO >= 15;"
+},
+{
+  "input": "저칼로리 다이어트 점심 메뉴 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND RCP_PAT2 LIKE '%점심%';"
+},
+{
+  "input": "운동 후 먹기 좋은 저지방 고단백 간식 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 25 AND INFO_FAT <= 10;"
+}
+{
+  "input": "점심으로 먹을 수 있는 저칼로리 샐러드 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "200kcal 이하 다이어트 간식 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 200;"
+},
+{
+  "input": "단백질 20g 이상 다이어트 식단 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "저지방 고단백 레시피 알려주세요",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 10 AND INFO_PRO >= 15;"
+},
+{
+  "input": "다이어트 중 간단하게 만들 수 있는 국 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%국%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "저칼로리 저녁으로 먹을 수 있는 집밥 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "점심 도시락으로 좋은 다이어트 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%도시락%' AND INFO_ENG <= 450;"
+},
+{
+  "input": "30분 안에 만들 수 있는 다이어트 샐러드",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND RCP_WAY2 LIKE '%30분%';"
+},
+{
+  "input": "칼로리 낮은 다이어트 스무디 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%스무디%' AND INFO_ENG <= 200;"
+},
+{
+  "input": "체중 감량용 단백질 쉐이크 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%쉐이크%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "1인분 기준 300kcal 이하 요리 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300;"
+},
+{
+  "input": "저탄수화물 다이어트 식단 알려줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30;"
+},
+{
+  "input": "다이어트용 간편 아침 메뉴 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "배불리 먹을 수 있는 다이어트 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND INFO_FAT <= 15;"
+},
+{
+  "input": "점심 400kcal 이하 샐러드 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "저지방 간식 레시피 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 5;"
+},
+{
+  "input": "다이어트용 저칼로리 국물 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%국물%' AND INFO_ENG <= 350;"
+},
+{
+  "input": "단백질 풍부한 다이어트 저녁 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "20분 안에 만들 수 있는 저칼로리 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300 AND RCP_WAY2 LIKE '%20분%';"
+},
+{
+  "input": "저탄수화물로 만들 수 있는 다이어트 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30;"
+},
+{
+  "input": "칼로리 적은 다이어트 샌드위치",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샌드위치%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "다이어트용 단백질 식사 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "저지방 200kcal 이하 간식 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 200 AND INFO_FAT <= 5;"
+},
+{
+  "input": "점심에 먹기 좋은 샐러드 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "다이어트용 간단한 스무디 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%스무디%' AND INFO_ENG <= 250;"
+},
+{
+  "input": "배불리 먹어도 칼로리 낮은 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND INFO_FAT <= 10;"
+},
+{
+  "input": "단백질 25g 이상 다이어트 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 25;"
+},
+{
+  "input": "저칼로리로 만들 수 있는 집밥 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400;"
+},
+{
+  "input": "30분 안에 만들 수 있는 다이어트 도시락",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%도시락%' AND RCP_WAY2 LIKE '%30분%';"
+},
+{
+  "input": "저지방 다이어트 아침 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_FAT <= 5;"
+},
+{
+  "input": "점심으로 먹는 400kcal 이하 다이어트 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%점심%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "단백질 위주 샐러드 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "저칼로리로 만들 수 있는 다이어트 저녁",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "배고플 때 먹을 수 있는 다이어트 간식",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 200;"
+},
+{
+  "input": "운동 후 단백질 보충용 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "저탄수화물로 만들 수 있는 다이어트 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30;"
+},
+{
+  "input": "다이어트용 1인분 저녁 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND RCP_PAT2 LIKE '%저녁%' LIMIT 1;"
+},
+{
+  "input": "저칼로리 국물 요리 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%국%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "단백질 풍부한 샐러드 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "20분 안에 만들 수 있는 저칼로리 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300 AND RCP_WAY2 LIKE '%20분%';"
+},
+{
+  "input": "다이어트용 스무디 레시피 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%스무디%' AND INFO_ENG <= 250;"
+},
+{
+  "input": "칼로리 300kcal 이하 간식",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300;"
+},
+{
+  "input": "저지방 다이어트 저녁 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 5 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "점심 도시락용 단백질 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%점심%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "다이어트 중 배부르게 먹을 수 있는 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 500 AND INFO_FAT <= 15;"
+},
+{
+  "input": "400kcal 이하 다이어트 아침",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "저탄수화물 간식 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30;"
+},
+{
+  "input": "단백질 20g 이상 아침 식사 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "저칼로리 점심 도시락 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%점심%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "30분 안에 만들 수 있는 다이어트 국 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%국%' AND RCP_WAY2 LIKE '%30분%';"
+},
+{
+  "input": "단백질 위주 저녁 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%저녁%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "다이어트용 간편 간식 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 200 AND RCP_PAT2 LIKE '%간식%';"
+},
+{
+  "input": "점심으로 먹는 저칼로리 샐러드",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "배부르지만 칼로리 낮은 다이어트 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND INFO_FAT <= 10;"
+},
+{
+  "input": "저지방 단백질 식사 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 5 AND INFO_PRO >= 20;"
+},
+{
+  "input": "다이어트용 스무디나 쉐이크 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%스무디%' OR RCP_PAT2 LIKE '%쉐이크%';"
+},
+{
+  "input": "칼로리 낮은 아침 식사 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "1인분 기준 300kcal 이하 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300 LIMIT 1;"
+},
+{
+  "input": "저탄수화물 저녁 메뉴 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "단백질 풍부한 점심 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%점심%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "다이어트용 30분 안에 만드는 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_WAY2 LIKE '%30분%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "저칼로리 간단한 국 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%국%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "배부르면서 다이어트용 샐러드",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 400;"
+},
+{
+  "input": "점심용 저지방 도시락",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%점심%' AND INFO_FAT <= 5;"
+},
+{
+  "input": "단백질 25g 이상 저녁 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%저녁%' AND INFO_PRO >= 25;"
+},
+{
+  "input": "저칼로리 다이어트 간식 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 200 AND RCP_PAT2 LIKE '%간식%';"
+},
+{
+  "input": "다이어트용 저녁 400kcal 이하",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "운동 후 단백질 보충 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "다이어트용 간단 샐러드 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "칼로리 200kcal 이하 간식",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 200;"
+},
+{
+  "input": "점심으로 먹는 단백질 샐러드",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%샐러드%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "저지방 다이어트 스무디",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%스무디%' AND INFO_FAT <= 5;"
+},
+{
+  "input": "1인분 기준 저칼로리 저녁 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300 AND RCP_PAT2 LIKE '%저녁%';"
+},
+{
+  "input": "다이어트용 국물 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%국%' AND INFO_ENG <= 350;"
+},
+{
+  "input": "단백질 풍부한 간단 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20;"
+},
+{
+  "input": "다이어트 중 간편하게 만들 수 있는 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400;"
+},
+{
+  "input": "저칼로리 아침 식사 추천",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_ENG <= 300;"
+},
+{
+  "input": "배부른 저탄수화물 요리",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 30 AND INFO_ENG <= 400;"
+},
+{
+  "input": "단백질 20g 이상 스무디 레시피",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%스무디%' AND INFO_PRO >= 20;"
+},
+{
+  "input": "저지방 200kcal 이하 아침 메뉴",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 LIKE '%아침%' AND INFO_FAT <= 5 AND INFO_ENG <= 200;"
+}
