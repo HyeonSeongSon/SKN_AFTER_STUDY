@@ -1,0 +1,1260 @@
+{
+  "input": "저칼로리 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 300 ORDER BY INFO_ENG;"
+}
+{
+  "input": "고단백 음식 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 15 ORDER BY INFO_PRO DESC;"
+}
+{
+  "input": "찜 요리 레시피 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_WAY2 = '찌기';"
+}
+{
+  "input": "나트륨이 적은 건강한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_NA <= 200 ORDER BY INFO_NA;"
+}
+{
+  "input": "반찬으로 만들 수 있는 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 = '반찬';"
+}
+{
+  "input": "국이나 찌개 종류 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_PAT2 = '국&찌개';"
+}
+{
+  "input": "저지방 요리가 있을까?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 10 ORDER BY INFO_FAT;"
+}
+{
+  "input": "끓이는 방법으로 만드는 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_WAY2 = '끓이기';"
+}
+{
+  "input": "다이어트에 좋은 400kcal 이하 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 400 ORDER BY INFO_ENG;"
+}
+{
+  "input": "탄수화물이 적은 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 15 ORDER BY INFO_CAR;"
+}
+{
+  "input": "새우가 들어간 요리 레시피 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%새우%' OR HASH_TAG LIKE '%새우%';"
+}
+{
+  "input": "부추 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%부추%' OR HASH_TAG LIKE '%부추%';"
+}
+{
+  "input": "토마토로 만들 수 있는 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%토마토%' OR HASH_TAG LIKE '%토마토%';"
+}
+{
+  "input": "오이를 활용한 건강한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%오이%' OR HASH_TAG LIKE '%오이%';"
+}
+{
+  "input": "사과가 들어간 특별한 요리 있을까?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%사과%' OR HASH_TAG LIKE '%사과%';"
+}
+{
+  "input": "저염식으로 만든 요리 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%저염%' OR RCP_NA_TIP IS NOT NULL;"
+}
+{
+  "input": "200kcal 미만의 가벼운 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG < 200 ORDER BY INFO_ENG;"
+}
+{
+  "input": "단백질 20g 이상인 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO >= 20 ORDER BY INFO_PRO DESC;"
+}
+{
+  "input": "기타 조리방법으로 만드는 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_WAY2 = '기타';"
+}
+{
+  "input": "나트륨이 100mg 이하인 건강식 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_NA <= 100 ORDER BY INFO_NA;"
+}
+{
+  "input": "두부로 만들 수 있는 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%두부%' OR HASH_TAG LIKE '%두부%';"
+}
+{
+  "input": "지방이 5g 이하인 저지방 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT <= 5 ORDER BY INFO_FAT;"
+}
+{
+  "input": "콩가루를 사용한 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%콩가루%' OR HASH_TAG LIKE '%콩가루%';"
+}
+{
+  "input": "열량이 높은 요리 500kcal 이상 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG >= 500 ORDER BY INFO_ENG DESC;"
+}
+{
+  "input": "해장국 종류 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%해장국%';"
+}
+{
+  "input": "황태를 사용한 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%황태%' OR HASH_TAG LIKE '%황태%';"
+}
+{
+  "input": "콩나물을 활용한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%콩나물%' OR HASH_TAG LIKE '%콩나물%';"
+}
+{
+  "input": "저감조리법 팁이 있는 요리 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NA_TIP IS NOT NULL AND RCP_NA_TIP != '';"
+}
+{
+  "input": "탄수화물이 30g 이상인 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR >= 30 ORDER BY INFO_CAR DESC;"
+}
+{
+  "input": "200-400kcal 사이의 적당한 칼로리 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG BETWEEN 200 AND 400 ORDER BY INFO_ENG;"
+}
+{
+  "input": "무를 사용한 건강한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%무%' OR recipe_steps LIKE '%무%';"
+}
+{
+  "input": "북어를 활용한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%북어%' OR recipe_steps LIKE '%북어%';"
+}
+{
+  "input": "청양고추가 들어간 매운 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%청양고추%';"
+}
+{
+  "input": "저염된장을 사용한 요리 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%저염된장%' OR recipe_steps LIKE '%저염된장%';"
+}
+{
+  "input": "단백질과 지방이 모두 낮은 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO <= 10 AND INFO_FAT <= 5 ORDER BY INFO_ENG;"
+}
+{
+  "input": "칼로리가 300-500 범위의 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG BETWEEN 300 AND 500 ORDER BY INFO_ENG;"
+}
+{
+  "input": "계란이 들어간 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%계란%' OR RCP_NM LIKE '%달걀%' OR recipe_steps LIKE '%계란%' OR recipe_steps LIKE '%달걀%';"
+}
+{
+  "input": "버섯을 활용한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%버섯%' OR recipe_steps LIKE '%버섯%';"
+}
+{
+  "input": "양파가 들어간 건강한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%양파%' OR recipe_steps LIKE '%양파%';"
+}
+{
+  "input": "나트륨 300mg 이하인 저나트륨 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_NA <= 300 ORDER BY INFO_NA;"
+}
+{
+  "input": "생크림을 사용한 특별한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%생크림%';"
+}
+{
+  "input": "찜 요리 중에서 가장 저칼로리인 것은?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_WAY2 = '찌기' ORDER BY INFO_ENG LIMIT 5;"
+}
+{
+  "input": "해시태그가 있는 요리들 보여줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE HASH_TAG IS NOT NULL AND HASH_TAG != '';"
+}
+{
+  "input": "단백질이 10-15g 사이인 적당한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO BETWEEN 10 AND 15 ORDER BY INFO_PRO;"
+}
+{
+  "input": "마늘을 사용한 건강한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%마늘%';"
+}
+{
+  "input": "지방 15g 이상인 고지방 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_FAT >= 15 ORDER BY INFO_FAT DESC;"
+}
+{
+  "input": "시금치를 활용한 영양가 높은 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%시금치%';"
+}
+{
+  "input": "소박이 김치 같은 절임 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%소박이%' OR RCP_NM LIKE '%김치%';"
+}
+{
+  "input": "멸치액젓을 사용한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%멸치액젓%';"
+}
+{
+  "input": "매실액을 사용한 건강한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%매실액%';"
+}
+{
+  "input": "통깨를 활용한 고소한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%통깨%' OR recipe_steps LIKE '%참깨%';"
+}
+{
+  "input": "순두부로 만든 건강 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%순두부%' OR HASH_TAG LIKE '%순두부%' OR recipe_steps LIKE '%순두부%';"
+}
+{
+  "input": "땅콩을 활용한 영양가 높은 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%땅콩%';"
+}
+{
+  "input": "무침 요리 중에서 저칼로리인 것은?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE RCP_NM LIKE '%무침%' ORDER BY INFO_ENG;"
+}
+{
+  "input": "표고버섯을 사용한 감칠맛 나는 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%표고버섯%' OR recipe_steps LIKE '%표고%';"
+}
+{
+  "input": "탄수화물 5g 이하인 극저탄수화물 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_CAR <= 5 ORDER BY INFO_CAR;"
+}
+{
+  "input": "대파를 활용한 향긋한 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%대파%';"
+}
+{
+  "input": "고춧가루를 사용한 매콤한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%고춧가루%';"
+}
+{
+  "input": "요리당으로 단맛을 낸 건강한 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%요리당%';"
+}
+{
+  "input": "참기름을 사용한 고소한 요리 찾아줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE recipe_steps LIKE '%참기름%';"
+}
+{
+  "input": "건강에 좋은 저나트륨 저지방 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_NA <= 150 AND INFO_FAT <= 8 ORDER BY INFO_ENG;"
+}
+{
+  "input": "칼로리는 낮지만 단백질이 높은 다이어트 요리는?",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_ENG <= 250 AND INFO_PRO >= 12 ORDER BY INFO_PRO DESC;"
+}
+{
+  "input": "균형 잡힌 영양소를 가진 요리 추천해줘",
+  "table": {
+    "table_name": "recipes",
+    "columns": {
+      "RCP_NM": "메뉴명",
+      "RCP_WAY2": "조리방법",
+      "RCP_PAT2": "요리종류",
+      "INFO_ENG": "열량",
+      "INFO_CAR": "탄수화물",
+      "INFO_PRO": "단백질",
+      "INFO_FAT": "지방",
+      "INFO_NA": "나트륨",
+      "recipe_steps": "레시피",
+      "RCP_NA_TIP": "저감조리법TIP",
+      "HASH_TAG": "해쉬태그"
+    }
+  },
+  "output": "SELECT * FROM recipes WHERE INFO_PRO BETWEEN 10 AND 20 AND INFO_CAR BETWEEN 10 AND 25 AND INFO_FAT BETWEEN 3 AND 12 ORDER BY INFO_ENG;"
+}

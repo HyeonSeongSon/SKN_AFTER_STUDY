@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+databases[postgresql]
+sqlalchemy
+psycopg2-binary
+pydantic>=2.0
+aiohttp
+pandas
